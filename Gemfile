@@ -5,10 +5,15 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+gem 'simple_calendar'
 gem 'devise'
 gem 'pundit'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
+gem 'angularjs-rails'
+gem 'angular-ui-calendar-rails'
+gem "recurring_select", github:"RundownApp/recurring_select"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'

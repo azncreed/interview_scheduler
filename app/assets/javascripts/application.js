@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require jquery_ujs
+//= require recurring_select
 //= require bootstrap-sprockets
-//= require turbolinks
 //= require_tree .
