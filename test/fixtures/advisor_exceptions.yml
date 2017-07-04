@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  advisor: one
+  time: 2017-07-04 23:04:18
+
+two:
+  advisor: two
+  time: 2017-07-04 23:04:18

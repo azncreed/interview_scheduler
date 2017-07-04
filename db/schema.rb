@@ -10,7 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170703230118) do
+ActiveRecord::Schema.define(version: 20170704130418) do
+
+  create_table "advisor_exceptions", force: :cascade do |t|
+    t.integer "advisor_id"
+    t.datetime "time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["advisor_id"], name: "index_advisor_exceptions_on_advisor_id"
+  end
+
+  create_table "advisors", force: :cascade do |t|
+    t.string "name"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.text "recurring"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "booking_id"
+    t.index ["booking_id"], name: "index_advisors_on_booking_id"
+    t.index ["user_id"], name: "index_advisors_on_user_id"
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "advisor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["advisor_id"], name: "index_bookings_on_advisor_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
